@@ -28,7 +28,7 @@ int main() {
         merge_insertion_sort_near_sorted_arr_timings.push_back(0);
     }
 
-    int n = 1;
+    int n = 50;
     for(int i=0; i<=n; i++){
         for (int size = 500; size <= 10000; size += 100) {
             std::cout << "Testing size: " << size << std::endl;
