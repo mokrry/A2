@@ -8,7 +8,7 @@
 void mergeInsertionSort(std::vector<int>& arr, int left, int right) {
     if (left >= right) return;
 
-    if (right - left + 1 <= 500/*15*/) {
+    if (right - left + 1 <= 15) {
         insertionSort(arr, left, right);
     } else {
         int mid = left + (right - left) / 2;
