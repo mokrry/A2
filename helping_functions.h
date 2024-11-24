@@ -12,7 +12,7 @@ inline void writeCSV(const std::vector<std::vector<float>>& data, const std::str
     std::ofstream file(filename);
 
     if (!file.is_open()) {
-        std::cerr << "Ошибка при открытии файла: " << filename << std::endl;
+        std::cerr << "Error while opening file: " << filename << std::endl;
         return;
     }
 
@@ -27,7 +27,7 @@ inline void writeCSV(const std::vector<std::vector<float>>& data, const std::str
     }
 
     file.close();
-    std::cout << "CSV файл успешно сохранен: " << filename << std::endl;
+    std::cout << "CSV file saved: " << filename << std::endl;
 }
 
 template <typename T>

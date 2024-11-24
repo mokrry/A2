@@ -8,7 +8,7 @@
 void mergeInsertionSort(std::vector<int>& arr, int left, int right) {
     if (left >= right) return;
 
-    if (right - left + 1 <= 15) {
+    if (right - left + 1 <= 500/*15*/) {
         insertionSort(arr, left, right);
     } else {
         int mid = left + (right - left) / 2;
@@ -16,6 +16,11 @@ void mergeInsertionSort(std::vector<int>& arr, int left, int right) {
         mergeInsertionSort(arr, mid + 1, right);
         merge(arr, left, mid, right);
     }
+}
+
+void mergeInsertionSort(std::vector<int>& arr) {
+    int left = 0, right = arr.size() - 1;
+    mergeInsertionSort(arr, left, right);
 }
 
 #endif //A2_MERGE_INSERTION_SORT_H

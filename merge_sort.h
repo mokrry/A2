@@ -45,4 +45,9 @@ void mergeSort(std::vector<int>& arr, int left, int right) {
     }
 }
 
+void mergeSort(std::vector<int>& arr) {
+    int left = 0, right = arr.size() - 1;
+    mergeSort(arr, left, right);
+}
+
 #endif // MERGE_SORT_H
